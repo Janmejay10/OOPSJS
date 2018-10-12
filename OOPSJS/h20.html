@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName
+};
+
+var myName = new Person("Janmejay", "Singh", 23, "brown");
+document.getElementById("demo").innerHTML =
+"My Name is " + myName.name(); 
+</script>
+
+</body>
+</html>
